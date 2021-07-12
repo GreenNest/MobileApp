@@ -7,7 +7,7 @@ class Headerbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.teal[700],
+      backgroundColor: Colors.green[900],
       // title: Image.asset("assets/logo.png", height: 50,),
       title: Text('Order History', style: TextStyle(color: Colors.white) ,),
       leading: Icon(Icons.view_headline, color: Colors.white,),
