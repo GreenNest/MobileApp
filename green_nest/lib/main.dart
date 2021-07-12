@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         //primarySwatch: Colors.white,
       ),
-      home: DeOngoning(),
+      home: Deliveryperson(),
     );
   }
 }

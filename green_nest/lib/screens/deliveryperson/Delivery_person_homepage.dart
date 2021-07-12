@@ -4,14 +4,14 @@ import 'package:green_nest/screens/deliveryperson/components/Deliveryheader.dart
 import 'package:green_nest/screens/deliveryperson/components/Notcompleteorders.dart';
 import 'package:green_nest/screens/deliveryperson/components/ongoingorders.dart';
 
-class DeOngoning extends StatefulWidget {
+class Deliveryperson extends StatefulWidget {
   //const Deliveryperson({Key? key}) : super(key: key);
 
   @override
-  _DeOngoningState createState() => _DeOngoningState();
+  _DeliverypersonState createState() => _DeliverypersonState();
 }
 
-class _DeOngoningState extends State<DeOngoning> {
+class _DeliverypersonState extends State<Deliveryperson> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
