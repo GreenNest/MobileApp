@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         //primarySwatch: Colors.white,
       ),
-      home: Orderhistory(),
+      home: Home(),
     );
   }
 }
