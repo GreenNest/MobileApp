@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:green_nest/Signin.dart';
+import 'package:green_nest/cart/cart.dart';
+
 import 'package:green_nest/screens/home/home.dart';
 import 'package:green_nest/screens/welcome/welcome.dart';
 
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         //primarySwatch: Colors.white,
       ),
-      home: Welcome(),
+      home: cart(),
     );
   }
 }
