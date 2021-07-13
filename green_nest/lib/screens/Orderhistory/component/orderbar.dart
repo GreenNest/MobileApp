@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:green_nest/screens/order/order.dart';
 import 'package:green_nest/screens/product/product.dart';
 
 
@@ -119,7 +120,9 @@ class Allorders extends StatelessWidget {
                    ],
                  ),
                  Colors.lightGreen[400],
-                     () {},
+                     () {
+                       Navigator.push(context, MaterialPageRoute(builder: (context)=>Order()));
+                     },
                ),
              ],
            )
