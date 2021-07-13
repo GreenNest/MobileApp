@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:green_nest/screens/home/components/category.dart';
 import 'Allplnts.dart';
 
 class homebody extends StatelessWidget {
@@ -13,43 +14,15 @@ class homebody extends StatelessWidget {
           HeaderWithSearchBox(size: size),
          Textwithmorebutton(title:"Top" ,press:(){}),
         Allplants(),
+        Allcategories()
         //Feactureplant(image: "assets/raphis.jpg", press: (){}),
-
       ],
     );
   }
 }
 
-// class Feactureplant extends StatelessWidget {
-//   const Feactureplant({
-//     Key key, this.image, this.press,
-//   }) : super(key: key);
-//
-//   final String image;
-//   final Function press;
-//   @override
-//
-//   Widget build(BuildContext context) {
-//     Size size = MediaQuery.of(context).size;
-//     return GestureDetector(
-//       onTap: press,
-//       child: Card(
-//         color: Colors.teal,
-//         child: Container(
-//           margin: EdgeInsets.only(left: 20,right: 30,top: 25),
-//           padding: EdgeInsets.only(),
-//           width: size.width *0.4,
-//           height: 40,
-//           decoration: BoxDecoration(
-//             borderRadius: BorderRadius.circular(10),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
 
-
+//more button designs
 class Textwithmorebutton extends StatelessWidget {
   const Textwithmorebutton({
     Key key, this.title , this.press,
@@ -75,6 +48,7 @@ class Textwithmorebutton extends StatelessWidget {
   }
 }
 
+//hi text style
 class TitleWithcoustomUnderline extends StatelessWidget {
   const TitleWithcoustomUnderline({
     Key key, this.text,
@@ -110,6 +84,7 @@ class TitleWithcoustomUnderline extends StatelessWidget {
   }
 }
 
+// searchbar and Head body style
 class HeaderWithSearchBox extends StatelessWidget {
   const HeaderWithSearchBox({
     Key key,
@@ -133,7 +108,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             ),
             height: size.height *0.175 -30,
             decoration: BoxDecoration(
-              color: Colors.teal[700],
+              color: Color(0xFF386641),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(36),
                 bottomRight: Radius.circular(36),

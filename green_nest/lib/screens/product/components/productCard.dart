@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:green_nest/widgets/text/CustomText.dart';
+import 'package:green_nest/widgets/text/customText.dart';
 
 class ProductCard extends StatelessWidget {
   final Color color;
@@ -9,10 +9,9 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 1000.0,
+      height: 200.0,
       color: color,
       child: Column(
-        mainAxisSize: MainAxisSize.max,
         children: [
           Container(
             height: 130.0,

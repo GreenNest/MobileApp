@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.teal[700],
+        backgroundColor: Color(0xFF386641),
         title: Text('Green Nest Plant Store',style: TextStyle(color: Colors.white,fontSize: 23),), centerTitle: true,),
       drawer: Sidebar(),
       body: homebody(),
