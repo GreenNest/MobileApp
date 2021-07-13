@@ -1,8 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'package:green_nest/Signup.dart';
+
 import 'package:green_nest/screens/home/home.dart';
 
 import 'Signup.dart';
+
 
 class Signin extends StatefulWidget {
   const Signin({Key key}) : super(key: key);
