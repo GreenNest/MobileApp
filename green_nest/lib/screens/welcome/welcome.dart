@@ -88,7 +88,12 @@ class Welcome extends StatelessWidget {
                     text: "Sign In",
                     textColor: Color(0xFFF2E8CF),
                     color: Color(0xFF386641),
-                    press: () => {Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin()))},
+
+                    press: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin()))
+                    },
+
+
                     borderColor: Color(0xFF386641)
                 ),
 
