@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:green_nest/screens/home/components/sidebar.dart';
 
 class CartView extends StatefulWidget {
   @override
@@ -6,6 +7,8 @@ class CartView extends StatefulWidget {
 }
 
 class _CartViewState extends State<CartView> {
+  Widget appbartitle= new Text('Shopping Cart',style: TextStyle(color: Colors.white),);
+  Icon actionIcon = new Icon(Icons.search);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,24 +24,60 @@ class _CartViewState extends State<CartView> {
       //   ),
       // ),
       backgroundColor: Color(0xFFF2E8CF),
+      // appBar: AppBar(
+      //   backgroundColor: Color(0xFF386641),
+      //   // leading: Icon(
+      //   //   Icons.arrow_back,
+      //   //   color: Colors.white,
+      //   //   size: 24,
+      //   // ),
+      //   title: Text(
+      //     "Shopping Cart",
+      //     style: TextStyle(
+      //       color: Colors.white,
+      //       fontSize: 24,
+      //       fontWeight: FontWeight.bold,
+      //     ),
+      //   ),
+      // ),
       appBar: AppBar(
         backgroundColor: Color(0xFF386641),
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.white,
-          size: 24,
-        ),
-        title: Text(
-          "Shopping Cart",
-          style: TextStyle(
+        title: appbartitle,
+        actions: [
+          new IconButton(
             color: Colors.white,
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
+            icon: actionIcon,
+            onPressed: (){
+              setState(() {
+                if(this.actionIcon.icon == Icons.search){
+                  this.actionIcon = new Icon(Icons.close,color: Colors.white,);
+                  this.appbartitle = new TextField(
+                    style: new TextStyle(
+                      color: Colors.white,
+                    ),
+                    decoration: new InputDecoration(
+                      prefixIcon: new Icon(Icons.search,color: Colors.white,),
+                      hintText: "Search....",
+                      hintStyle: new TextStyle(color: Colors.white),
+                    ),
+                  );
+                } else{
+                  this.actionIcon = new Icon(Icons.search);
+                  this.appbartitle = new Text("Shopping Cart",style: TextStyle(color: Colors.white),);
+                }
+              });
+            },
           ),
-        ),
+          Icon(Icons.add_alert_rounded,color: Colors.white),
+        ],
+        // leading: Container(
+        //   child: ,
+        // ),
       ),
+      drawer: Sidebar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
+
         child: Column(
           // crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +94,7 @@ class _CartViewState extends State<CartView> {
             CartItem(),
             CartItem(),
             CartItem(),
-            SizedBox(height: 12.0),
+            SizedBox(height: 10.0),
             Divider(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

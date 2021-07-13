@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:green_nest/screens/product/product.dart';
+import 'package:green_nest/screens/product/productList.dart';
 
 class Allcategories extends StatelessWidget {
   const Allcategories({
@@ -24,7 +26,9 @@ class Allcategories extends StatelessWidget {
           Categorycard(
             title: "Fruit Plant",
             stock: 30,
-            press: () {},
+            press: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductList()));
+            },
           ),
           Categorycard(
             title: "Seeds",
@@ -60,7 +64,7 @@ class Categorycard extends StatelessWidget {
       margin: EdgeInsets.only(
         left: 20,
         top: 2,
-        bottom: 0,
+        bottom: 15,
       ),
       width: size.width * 0.5,
       child: Column(

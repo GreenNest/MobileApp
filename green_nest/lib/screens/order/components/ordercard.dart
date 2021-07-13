@@ -68,13 +68,11 @@ class OrderBar extends StatelessWidget {
               iconText(
                   Icon(Icons.arrow_right_rounded, color: Colors.lightGreen),
                   Text(
-                    "Budded Avacado",
+                    "Budded Avacado(2)",
                     style: TextStyle(
                         fontSize: 16, fontWeight: FontWeight.bold),)
               ),
 
-              Text("2",
-                style: TextStyle(fontSize: 14),),
               Text("800 LKR",
                 style: TextStyle(fontSize: 14),)
             ],
@@ -86,13 +84,12 @@ class OrderBar extends StatelessWidget {
               iconText(
                   Icon(Icons.arrow_right_rounded, color: Colors.lightGreen),
                   Text(
-                    "Sensavaria",
+                    "Sensavaria(1)",
                     style: TextStyle(
                         fontSize: 16, fontWeight: FontWeight.bold),)
               ),
 
-              Text("1",
-                style: TextStyle(fontSize: 14),),
+
               Text("1200 LKR",
                 style: TextStyle(fontSize: 14),)
             ],
@@ -104,13 +101,11 @@ class OrderBar extends StatelessWidget {
               iconText(
                   Icon(Icons.arrow_right_rounded, color: Colors.lightGreen),
                   Text(
-                    "Plastic pots",
+                    "Plastic pots(5)",
                     style: TextStyle(
                         fontSize: 16, fontWeight: FontWeight.bold),)
               ),
 
-              Text("5",
-                style: TextStyle(fontSize: 14),),
               Text("750 LKR",
                 style: TextStyle(fontSize: 14),)
             ],
@@ -123,13 +118,11 @@ class OrderBar extends StatelessWidget {
               iconText(
                   Icon(Icons.arrow_right_rounded, color: Colors.lightGreen),
                   Text(
-                    "lemon",
+                    "lemon(2)",
                     style: TextStyle(
                         fontSize: 16, fontWeight: FontWeight.bold),)
               ),
 
-              Text("2",
-                style: TextStyle(fontSize: 14),),
               Text("200 LKR",
                 style: TextStyle(fontSize: 14),)
             ],

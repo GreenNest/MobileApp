@@ -37,12 +37,12 @@ class Textwithmorebutton extends StatelessWidget {
         children: [
           TitleWithcoustomUnderline(text: title,),
           Spacer(),
-          FlatButton(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              color: Colors.teal[700],
-              onPressed: press,
-              child: Text("More", style: TextStyle(color: Colors.white),)),
-        ],
+        //   FlatButton(
+        //     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        //       color: Colors.teal[700],
+        //       onPressed: press,
+        //       child: Text("More", style: TextStyle(color: Colors.white),)),
+         ],
       ),
     );
   }
@@ -63,7 +63,7 @@ class TitleWithcoustomUnderline extends StatelessWidget {
         //  Row(
          //   children: [
               Padding(
-                padding: const EdgeInsets.only(left: 20/4),
+                padding: const EdgeInsets.only(left: 30/4),
                 child: Text(text,style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
               ),
            Positioned(
@@ -71,8 +71,8 @@ class TitleWithcoustomUnderline extends StatelessWidget {
                right: 0,
                left: 0,
                child:Container(
-                 margin: EdgeInsets.only(right: 1/4),
-                 height: 5,
+                 margin: EdgeInsets.only(right: 5/4),
+                 height: 2,
                  color: Colors.green.withOpacity(0.9),
                ) ),
            // ],
@@ -96,7 +96,7 @@ class HeaderWithSearchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 30),
+      margin: EdgeInsets.only(bottom: 20),
       height: size.height* 0.175,
       child: Stack(
         children: <Widget>[
@@ -104,7 +104,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             padding: EdgeInsets.only(
               left: 20,
               right: 20,
-              bottom: 15
+              bottom: 10
             ),
             height: size.height *0.175 -30,
             decoration: BoxDecoration(
@@ -127,7 +127,7 @@ class HeaderWithSearchBox extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 30),
                 padding: EdgeInsets.symmetric(horizontal: 30),
-                height: 54,
+                height: 40,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(25),

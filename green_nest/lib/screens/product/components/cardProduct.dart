@@ -32,7 +32,8 @@ class _CardProductState extends State<CardProduct> {
           child: Row(
             children: [
               Container(
-                width: 200.0,
+                //Piyumi change width 200->150
+                width: 150.0,
                 height: 150.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(

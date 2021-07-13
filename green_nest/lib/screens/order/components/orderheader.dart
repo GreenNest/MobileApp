@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:green_nest/screens/Orderhistory/Orderhistory.dart';
+import 'package:green_nest/screens/home/components/sidebar.dart';
 
 class orderheader extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -10,7 +12,15 @@ class orderheader extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.green[800],
       // title: Image.asset("assets/logo.png", height: 50,),
       title: Text('Orders', style: TextStyle(color: Colors.white) ,),
-      leading: Icon(Icons.arrow_back, color: Colors.white,),
+      leading: GestureDetector(
+        onTap: (){
+          //Navigator.push(context, MaterialPageRoute(builder: (context)=>Orderhistory()));
+          Navigator.pop(context, MaterialPageRoute(builder: (context)=>Orderhistory()));
+        },
+        child: Icon(
+          Icons.arrow_back,
+          color: Colors.white,),
+      ),
       centerTitle: true,
       actions: [
         IconButton(onPressed: (){}, icon: Icon(Icons.add_alert_sharp,color: Colors.white,))
