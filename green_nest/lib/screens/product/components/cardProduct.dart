@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:green_nest/screens/cart/cart.dart';
+import 'package:green_nest/screens/product/SelectProduct.dart';
 
 class CardProduct extends StatefulWidget {
   @override
@@ -31,25 +33,32 @@ class _CardProductState extends State<CardProduct> {
           margin: EdgeInsets.only(bottom: 20.0),
           child: Row(
             children: [
-              Container(
-                //Piyumi change width 200->150
-                width: 150.0,
-                height: 150.0,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('${images[index]}'),
-                      alignment: Alignment.topLeft),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectProduct()));
+                },
+                child: Container(
+                  // change width 200->150
+                  width: 200.0,
+                  height: 175.0,
+                  padding: EdgeInsets.only(left: 10),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('${images[index]}'),
+                        alignment: Alignment.center,
+                    ),
+                  ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 20.0),
+                padding: EdgeInsets.only(left: 40.0),
                 child: Column(
                   children: [
                     Text(
                       '${name[index]}',
                       style: TextStyle(
                         color: Color(0xFF386641),
-                        fontSize: 26.0,
+                        fontSize: 20.0,
                         fontWeight: FontWeight.w800,
                       ),
                     ),
@@ -57,7 +66,7 @@ class _CardProductState extends State<CardProduct> {
                       '${price[index]}',
                       style: TextStyle(
                         color: Color(0xFFF44336),
-                        fontSize: 22.0,
+                        fontSize: 18.0,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -65,25 +74,36 @@ class _CardProductState extends State<CardProduct> {
                       '${stock[index]} in stock',
                       style: TextStyle(
                         color: Color(0xFF000000),
-                        fontSize: 19.0,
+                        fontSize: 16.0,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 15.0),
-                      child: FloatingActionButton.extended(
-                        onPressed: () {},
-                        label: Text(
-                          "Add to Cart",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        backgroundColor: Colors.pink[50],
-                      ),
-                    )
+                    // Padding(
+                    //   padding: EdgeInsets.only(top: 15.0),
+                    //   child: FloatingActionButton.extended(
+                    //     onPressed: () {},
+                    //     label: Text(
+                    //       "Add to Cart",
+                    //       style: TextStyle(
+                    //         color: Colors.black,
+                    //         fontSize: 12.0,
+                    //         fontWeight: FontWeight.bold,
+                    //       ),
+                    //     ),
+                    //     backgroundColor: Colors.pink[50],
+                    //   ),
+                    // )
+                    SizedBox(height: 8,),
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CartView()));
+                      },
+                      child: Text("Add to Cart",style: TextStyle(color: Colors.black),),
+                      padding: EdgeInsets.all(10),
+                      color: Colors.yellow[100],
+                      focusColor: Colors.orange[900],
+                      shape: StadiumBorder(),
+                    ),
                   ],
                 ),
               ),

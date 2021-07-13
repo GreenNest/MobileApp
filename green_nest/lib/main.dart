@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:green_nest/screens/Leave/Components/Sidebar_staff.dart';
 
-import 'package:green_nest/Leave/Leave.dart';
+import 'package:green_nest/screens/Leave/Leave.dart';
 
 
 import 'package:green_nest/screens/deliveryperson/Delivery_person_homepage.dart';
@@ -38,14 +39,14 @@ class MyApp extends StatelessWidget {
         //primarySwatch: Colors.white,
       ),
 
+      //view to customer part
+      home: Welcome(),
 
+      //view to Deliveryperson part
+      //home: Deliveryperson(),
 
-     
-
-
-
-
-      home: SelectProduct(),
+      //view to employee part
+      //home: Leave(),
 
 
 

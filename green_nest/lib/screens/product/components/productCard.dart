@@ -14,7 +14,7 @@ class ProductCard extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 130.0,
+            height: 200.0,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/image3.jpg'),

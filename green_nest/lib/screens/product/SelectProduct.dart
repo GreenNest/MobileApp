@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:green_nest/screens/product/productList.dart';
 
 class SelectProduct extends StatefulWidget {
   const SelectProduct({Key key}) : super(key: key);
@@ -11,11 +12,24 @@ class _SelectProductState extends State<SelectProduct> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: GestureDetector(
+              onTap: () {
+                Navigator.pop(context, MaterialPageRoute(builder: (context)=>ProductList()));
+              },
+              child: Icon(
+                Icons.arrow_back,
+                color: Colors.white,
+                size: 30,
+              ),
+            ),
+
+      ),
       body: Container(
         child: ListView(
           children: [
             Container(
-
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.4,
 
@@ -354,7 +368,7 @@ class _SelectProductState extends State<SelectProduct> {
               ),
               padding: const EdgeInsets.all(10),
 
-              height: 120,
+              height: 200,
               decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -397,7 +411,7 @@ class _SelectProductState extends State<SelectProduct> {
                 padding: const EdgeInsets.all(10),
 
 
-                height: 120,
+                height: 200,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
@@ -519,7 +533,7 @@ class _SelectProductState extends State<SelectProduct> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+                    padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                     decoration: BoxDecoration(
                       color: Color(0xFFF2E8CF),
                       borderRadius: BorderRadius.circular(10),
@@ -537,7 +551,7 @@ class _SelectProductState extends State<SelectProduct> {
                   ),
 
                   Container(
-                    padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+                    padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                     decoration: BoxDecoration(
                       color: Colors.green[700],
                       borderRadius: BorderRadius.circular(10),

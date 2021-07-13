@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:green_nest/Signin.dart';
+import 'package:green_nest/screens/Leave/Leave.dart';
 import 'package:green_nest/screens/Orderhistory/Orderhistory.dart';
 import 'package:green_nest/screens/cart/cart.dart';
 import 'package:green_nest/screens/deliveryperson/Delivery_person_homepage.dart';
+import 'package:green_nest/screens/deliveryperson/components/Delivery_leave.dart';
 import 'package:green_nest/screens/home/home.dart';
 
 class Sidebar extends StatelessWidget {
@@ -18,18 +20,18 @@ class Sidebar extends StatelessWidget {
               accountName: Text(
                 'Chamod Madhushnka',
                 style: TextStyle(
-                    color: Color(0xFFF2E8CF)
+                    color: Color(0xFF386641)
                   // backgroundColor: Colors.green,
                 ),
               ),
               accountEmail: Text(
                 'Chamod@gmail.com',
                 style: TextStyle(
-                    color: Color(0xFFF2E8CF)
+                    color: Color(0xFF386641)
                 ),
               ),
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage("assets/image6.jpg"),
+                backgroundImage: AssetImage("assets/Delivryperson.jpeg"),
                 // child: Image.asset(
                 //   'assets/image6.jpg',
                 //  fit:BoxFit.fitHeight ,
@@ -48,7 +50,7 @@ class Sidebar extends StatelessWidget {
               leading: Icon(Icons.access_alarm_rounded, color: Color(0xFFF2E8CF), size: 35,),
               title: Text('Leave Request', style: TextStyle(color: Color(0xFFF2E8CF)),),
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>CartView()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>DeliveryLeave()));
               },
             ),
             ListTile(

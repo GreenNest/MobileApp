@@ -89,12 +89,14 @@ class _CartViewState extends State<CartView> {
             //     fontSize: 21.0,
             //   ),
             // ),
-            SizedBox(height: 18.0),
+            //18
+            SizedBox(height: 8.0),
             CartItem(),
             CartItem(),
             CartItem(),
             CartItem(),
-            SizedBox(height: 10.0),
+            //10
+            SizedBox(height: 0.0),
             Divider(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -172,7 +174,8 @@ class _CartViewState extends State<CartView> {
                 ),
               ),
             ),
-            SizedBox(height: 18.0),
+            //18
+            SizedBox(height: 8.0),
           ],
         ),
       ),
@@ -198,7 +201,7 @@ class CartItem extends StatelessWidget {
         children: <Widget>[
           Container(
             width: 100.0,
-            height: 100.0,
+            height: 90.0,
             decoration: BoxDecoration(
               color: Color(0xFFF2E8CF),
               borderRadius: BorderRadius.circular(20.0),
@@ -207,6 +210,7 @@ class CartItem extends StatelessWidget {
             child: Center(
               child: Container(
                 width: 100.0,
+                //100
                 height: 90.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
