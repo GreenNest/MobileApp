@@ -108,7 +108,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             ),
             height: size.height *0.175 -30,
             decoration: BoxDecoration(
-              color: Colors.teal[700],
+              color: Color(0xFF386641),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(36),
                 bottomRight: Radius.circular(36),

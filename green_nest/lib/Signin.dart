@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:green_nest/screens/home/home.dart';
+
+import 'Signup.dart';
 
 class Signin extends StatefulWidget {
   const Signin({Key key}) : super(key: key);
@@ -115,20 +118,25 @@ class _SigninState extends State<Signin> {
                 ),
               ),
             ),
-            Container(
-              height: 50,
-              width: 100,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: Color(0xFF386641),
-                  borderRadius: BorderRadius.circular(30)),
-              margin: EdgeInsets.only(top: 20, bottom: 40, left: 70, right: 70),
-              child: Text(
-                'Sign In',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.yellow),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+              },
+              child: Container(
+                height: 50,
+                width: 100,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: Color(0xFF386641),
+                    borderRadius: BorderRadius.circular(30)),
+                margin: EdgeInsets.only(top: 20, bottom: 40, left: 70, right: 70),
+                child: Text(
+                  'Sign In',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.yellow),
+                ),
               ),
             ),
             Container(
@@ -140,7 +148,9 @@ class _SigninState extends State<Signin> {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+                    },
                     child: Text(
                       ' Sign Up',
                       style: TextStyle(

@@ -22,7 +22,7 @@ class Allcategories extends StatelessWidget {
             press: () {},
           ),
           Categorycard(
-            title: "Budded Plant",
+            title: "Fruit Plant",
             stock: 30,
             press: () {},
           ),
@@ -59,8 +59,8 @@ class Categorycard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(
         left: 20,
-        top: 20,
-        bottom: 15,
+        top: 2,
+        bottom: 0,
       ),
       width: size.width * 0.5,
       child: Column(

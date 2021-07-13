@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:green_nest/Signin.dart';
 
 
 
@@ -320,7 +321,9 @@ class _SignupState extends State<Signup> {
 
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin()));
+                    },
                     child: Text(
                       'Sign In',
                       style: TextStyle(
