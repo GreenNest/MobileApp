@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:green_nest/screens/deliveryperson/Delivery_person_homepage.dart';
+import 'package:green_nest/screens/order/order.dart';
+import 'package:green_nest/screens/welcome/welcome.dart';
 
 
 void main() {
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         //primarySwatch: Colors.white,
       ),
-      home: Deliveryperson(),
+      home: Welcome(),
     );
   }
 }

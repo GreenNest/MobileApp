@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:green_nest/screens/product/product.dart';
 
 
-class Notcompleteorders extends StatelessWidget {
-  const Notcompleteorders({
+class ordercard extends StatelessWidget {
+  const ordercard({
     Key key,
   }) : super(key: key);
 
@@ -17,24 +17,13 @@ class Notcompleteorders extends StatelessWidget {
           color: Colors.grey[200],
           margin: EdgeInsets.all(8),
           child: OrderBar(
-            status: "delivered",
-            orederid: "OC1000",
-            date: "2021/07/08",
-            address:"NO:28/A ,kurunagala",
+            status: "ongoing",
+            orederid: "OR2103",
+            date: "2021/07/09",
+            address:"NO:28/A ,Bangamuwa,Kurunagala",
 
           ),
         ),
-        Card(
-          color: Colors.grey[200],
-          margin: EdgeInsets.all(10),
-          child: OrderBar(
-            status: "ongoing",
-            orederid: "OR3020",
-            date: "2021/06/23",
-            address:"Subha,Kurunagala",
-          ),
-        ),
-        
       ],
 
     );
@@ -60,26 +49,16 @@ class OrderBar extends StatelessWidget {
           Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                checkButton(
-                  Row(
-                    children: [
-                      Icon(Icons.check,color: Colors.red,),
-                    ],
-                  ),
-                  Colors.white,
-                      () {},
-                ),
+                MainText(
+                    Text(
+                      "Customer :",
+                      style: TextStyle(
+                          fontSize: 16, fontWeight: FontWeight.bold),)),
+                Text("N.P.M.Abyesekara",
+                style: TextStyle(fontSize: 14,),),
+                //Spacer(flex: 1,),
                 Spacer(),
-                flatButton(
-                  Row(
-                    children: [
-                      Text("Order Details"),
-                      Icon(Icons.chevron_right),
-                    ],
-                  ),
-                  Colors.lightGreen[400],
-                      () {},
-                ),]
+                ]
           ),
           Divider(color: Colors.grey,),
           SizedBox(height: 10,),
@@ -87,12 +66,52 @@ class OrderBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               iconText(
-                  Icon(Icons.edit, color: Colors.lightGreen),
+                  Icon(Icons.arrow_right_rounded, color: Colors.lightGreen),
                   Text(
-                    "Order Id",
+                    "Budded Avacado",
                     style: TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.bold),)),
-              Text(orederid,
+                        fontSize: 16, fontWeight: FontWeight.bold),)
+              ),
+
+              Text("2",
+                style: TextStyle(fontSize: 14),),
+              Text("800 LKR",
+                style: TextStyle(fontSize: 14),)
+            ],
+          ),
+          SizedBox(height: 15,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              iconText(
+                  Icon(Icons.arrow_right_rounded, color: Colors.lightGreen),
+                  Text(
+                    "Sensavaria",
+                    style: TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.bold),)
+              ),
+
+              Text("1",
+                style: TextStyle(fontSize: 14),),
+              Text("1200 LKR",
+                style: TextStyle(fontSize: 14),)
+            ],
+          ),
+          SizedBox(height: 15,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              iconText(
+                  Icon(Icons.arrow_right_rounded, color: Colors.lightGreen),
+                  Text(
+                    "Plastic pots",
+                    style: TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.bold),)
+              ),
+
+              Text("5",
+                style: TextStyle(fontSize: 14),),
+              Text("750 LKR",
                 style: TextStyle(fontSize: 14),)
             ],
           ),
@@ -102,30 +121,36 @@ class OrderBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               iconText(
-                  Icon(Icons.today_sharp, color: Colors.lightGreen),
+                  Icon(Icons.arrow_right_rounded, color: Colors.lightGreen),
                   Text(
-                    "Date",
+                    "lemon",
                     style: TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.bold),)),
-              Text(date,
+                        fontSize: 16, fontWeight: FontWeight.bold),)
+              ),
+
+              Text("2",
+                style: TextStyle(fontSize: 14),),
+              Text("200 LKR",
                 style: TextStyle(fontSize: 14),)
             ],
           ),
-          SizedBox(height: 15,),
+          Divider(color: Colors.grey,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               iconText(
-                  Icon(Icons.location_pin, color: Colors.lightGreen),
+                  Icon(Icons.arrow_right_rounded, color: Colors.lightGreen),
                   Text(
-                    "Address",
+                    "Total",
                     style: TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.bold),)),
-              Text(address,
+                        fontSize: 16, fontWeight: FontWeight.bold),)
+              ),
+
+
+              Text("1950 LKR",
                 style: TextStyle(fontSize: 14),)
             ],
           ),
-          SizedBox(height: 15,),
 
         ],
       ),
@@ -136,6 +161,11 @@ class OrderBar extends StatelessWidget {
   Widget iconText(iconWidget, TextWidget) {
     return Row(
         children: [iconWidget, SizedBox(width: 5), TextWidget]);
+  }
+
+  Widget MainText( TextWidget) {
+    return Row(
+        children: [ SizedBox(width: 5), TextWidget]);
   }
 
   //order details button

@@ -34,6 +34,11 @@ class Sidebar extends StatelessWidget {
               title: Text('Home', style: TextStyle(color: Color(0xFFF2E8CF)),),
               onTap: (){},
             ),
+            ListTile(
+              leading: Icon(Icons.add_shopping_cart, color: Color(0xFFF2E8CF), size: 35,),
+              title: Text('Cart', style: TextStyle(color: Color(0xFFF2E8CF)),),
+              onTap: (){},
+            ),
           ],
         ),
       ),

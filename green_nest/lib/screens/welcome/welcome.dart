@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:green_nest/Signin.dart';
 import 'package:green_nest/screens/welcome/components/button.dart';
+
+import '../../Signup.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -76,14 +79,16 @@ class Welcome extends StatelessWidget {
                   text: "Sign Up",
                   color: Color(0xFFF2E8CF),
                   textColor: Color(0xFF386641),
-                  press: () => {},
+                  press: () => {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()))
+                  },
                   borderColor: Color(0xFFF2E8CF)
                 ),
                 Button(
                     text: "Sign In",
                     textColor: Color(0xFFF2E8CF),
                     color: Color(0xFF386641),
-                    press: () => {},
+                    press: () => {Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin()))},
                     borderColor: Color(0xFF386641)
                 ),
 
