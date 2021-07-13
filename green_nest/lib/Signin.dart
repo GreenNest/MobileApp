@@ -24,9 +24,9 @@ class _SigninState extends State<Signin> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-          alignment: Alignment.bottomLeft,
+          alignment: Alignment.centerLeft,
           image: AssetImage(
-            'assets/back2.jpg',
+            'assets/back4.jpg',
           ),
           fit: BoxFit.cover,
         )),

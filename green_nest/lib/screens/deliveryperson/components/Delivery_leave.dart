@@ -3,46 +3,46 @@ import 'package:flutter/material.dart';
 // ignore: implementation_imports
 import 'package:flutter/src/material/icons.dart';
 
-import 'package:green_nest/Leave/Components/Sidebar_staff.dart';
-import 'package:green_nest/Leave/Components/leave_button.dart';
+import 'package:green_nest/screens/Leave/Components/Sidebar_staff.dart';
+import 'package:green_nest/screens/Leave/Components/leave_button.dart';
+import 'package:green_nest/screens/deliveryperson/components/dsidebar.dart';
+//import 'package:green_nest/screens/Leave/Esidebar.dart';
 
-class Leave extends StatefulWidget {
-  const Leave({Key key}) : super(key: key);
+class DeliveryLeave extends StatefulWidget {
+  const DeliveryLeave({Key key}) : super(key: key);
 
   @override
-  _LeaveState createState() => _LeaveState();
+  _DeliveryLeaveState createState() => _DeliveryLeaveState();
 }
 
-class _LeaveState extends State<Leave> {
+class _DeliveryLeaveState extends State<DeliveryLeave> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green[800],
-
-
-
-         leading: const Icon(
-           Icons.menu,
-           color: Colors.white,
-         ),
+        // leading: const Icon(
+        //   Icons.menu,
+        //   color: Colors.white,
+        // ),
 
         actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.logout,
-              color: Colors.white,
-            ),
-          )
+          // IconButton(
+          //   icon: const Icon(
+          //     Icons.logout,
+          //     color: Colors.white,
+          //   ),
+          // )
         ],
       ),
+      drawer: Sidebar(),
       body: Padding(
         padding: EdgeInsets.only(top: 30.0, left: 20.0,right: 20.0),
         child: ListView(
           children: <Widget>[
             Container(
               //color: Colors.white,
-             // margin: EdgeInsets.only(bottom: 30.0),
+              // margin: EdgeInsets.only(bottom: 30.0),
 
               height: 650,
               decoration: BoxDecoration(
@@ -61,40 +61,40 @@ class _LeaveState extends State<Leave> {
                   Container(
                     margin: EdgeInsets.only(top: 30.0, right: 20, left: 20),
 
-                   child:Text(
-                    'Request a Leave',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black,
+                    child:Text(
+                      'Request a Leave',
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.black,
+                      ),
                     ),
-                  ),
                   ),
                   Container(
                       margin: EdgeInsets.only(top: 80.0, right: 20, left: 20),
 
                       child:TextFormField(
 
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black),
-                      decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.black.withOpacity(0.2),
-                      prefixIcon: Icon(
-                        Icons.account_circle_outlined,
-                        color: Colors.black,
-                      ),
-                      contentPadding:
-                      EdgeInsets.only(left: 2, top: 2, bottom: 2, right: 20),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide:
-                          BorderSide(width: 0, style: BorderStyle.none)),
-                      hintText: ' Saman',
-                    ),
-                  )
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black),
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.black.withOpacity(0.2),
+                          prefixIcon: Icon(
+                            Icons.account_circle_outlined,
+                            color: Colors.black,
+                          ),
+                          contentPadding:
+                          EdgeInsets.only(left: 2, top: 2, bottom: 2, right: 20),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide:
+                              BorderSide(width: 0, style: BorderStyle.none)),
+                          hintText: ' Saman',
+                        ),
+                      )
                   ),
                   Container(
                       margin: EdgeInsets.only(top: 20.0, right: 20, left: 20),
@@ -149,7 +149,7 @@ class _LeaveState extends State<Leave> {
                       )
                   ),
                   Container(
-                  margin: EdgeInsets.only(top: 40.0, left: 50, right: 50),
+                    margin: EdgeInsets.only(top: 40.0, left: 50, right: 50),
                     //alignment: FractionalOffset.center,
                     child: Row(
                       children: <Widget>[
@@ -163,9 +163,9 @@ class _LeaveState extends State<Leave> {
                         Text(
                           '  Full Day',
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            color: Colors.black
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: Colors.black
                           ),
                         ),
                         Spacer(flex: 5),
@@ -194,11 +194,11 @@ class _LeaveState extends State<Leave> {
 
                       children: <Widget>[
                         leave_button(
-                            text: "Submit",
-                            textColor: Color(0xFFF2E8CF),
-                            color: Color(0xFF386641),
-                            press: () => {},
-                            borderColor: Color(0xFF386641),
+                          text: "Submit",
+                          textColor: Color(0xFFF2E8CF),
+                          color: Color(0xFF386641),
+                          press: () => {},
+                          borderColor: Color(0xFF386641),
 
                         ),
 
@@ -220,7 +220,7 @@ class _LeaveState extends State<Leave> {
           ],
         ),
       ),
-      drawer: Sidebar_staff(),
+      // drawer: Sidebar_staff(),
     );
   }
 }

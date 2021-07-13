@@ -12,7 +12,7 @@ class Product extends StatelessWidget {
             image: AssetImage(
               'assets/image7.jpg',
             ),
-            alignment: Alignment.topCenter,
+            alignment: Alignment.center,
           ),
           borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(25.0),
