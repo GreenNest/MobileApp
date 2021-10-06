@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:green_nest/widgets/text/customText.dart';
+import 'package:green_nest/widgets/text/CustomText.dart';
 
 class ProductCard extends StatelessWidget {
   final Color color;
