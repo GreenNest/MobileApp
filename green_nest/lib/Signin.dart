@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:green_nest/Signup.dart';
 
 import 'package:green_nest/screens/home/home.dart';
+import 'package:green_nest/services/HttpRequest.dart';
 
 import 'Signup.dart';
-
+import 'config/common/CommonDialog.dart';
 
 class Signin extends StatefulWidget {
   const Signin({Key key}) : super(key: key);
@@ -16,6 +18,8 @@ class Signin extends StatefulWidget {
 }
 
 class _SigninState extends State<Signin> {
+  final email = TextEditingController();
+  final password = TextEditingController();
   bool obsecure = true;
   @override
   Widget build(BuildContext context) {
@@ -68,6 +72,7 @@ class _SigninState extends State<Signin> {
               decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(20)),
               child: TextFormField(
+                controller: email,
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
@@ -96,6 +101,7 @@ class _SigninState extends State<Signin> {
               decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(20)),
               child: TextField(
+                controller: password,
                 obscureText: obsecure,
                 style: TextStyle(
                     fontSize: 18,
@@ -124,7 +130,7 @@ class _SigninState extends State<Signin> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+                _handleLogin();
               },
               child: Container(
                 height: 50,
@@ -133,7 +139,8 @@ class _SigninState extends State<Signin> {
                 decoration: BoxDecoration(
                     color: Color(0xFF386641),
                     borderRadius: BorderRadius.circular(30)),
-                margin: EdgeInsets.only(top: 20, bottom: 40, left: 70, right: 70),
+                margin:
+                    EdgeInsets.only(top: 20, bottom: 40, left: 70, right: 70),
                 child: Text(
                   'Sign In',
                   style: TextStyle(
@@ -153,7 +160,8 @@ class _SigninState extends State<Signin> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Signup()));
                     },
                     child: Text(
                       ' Sign Up',
@@ -167,10 +175,31 @@ class _SigninState extends State<Signin> {
                 ],
               ),
             ),
-            
           ],
         ),
       ),
     );
+  }
+
+  void _handleLogin() {
+    CommonDialog().createProgress("Please wait...");
+
+    Map<String, dynamic> _data = {
+      "userName": email.text,
+      "password": password.text
+    };
+
+    HttpRequest(url: "auth/login", data: _data).postLoginData().then((value) {
+      if (value == "Login Success") {
+        Get.back();
+        Get.offAllNamed("/");
+      } else if(value == "Bad credentials"){
+        Get.back();
+        // ============================= CREATE ERROR BOX BAD CREDENTIALS ======================
+      } else {
+        Get.back();
+        // ==================================ERROR BOX ===============================
+      }
+    });
   }
 }
